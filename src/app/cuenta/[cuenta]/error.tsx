@@ -2,8 +2,9 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
+import Search from '@/components/cuenta/Search';
 
-export default function Error({
+export default function CuentaError({
     error,
     reset,
 }: {
@@ -15,16 +16,17 @@ export default function Error({
     }, [error]);
 
     return (
-        <div className='flex min-h-[70vh] items-center justify-center bg-paper p-5'>
-            <div className='w-full max-w-md rounded-2xl border border-ink/15 bg-white p-6 text-center sm:p-8'>
+        <>
+            <Search styleVariant='compact' />
+            <div className='mx-auto mt-6 flex max-w-md flex-col items-center rounded-2xl border border-ink/15 bg-white p-6 text-center sm:p-8'>
                 <span className='inline-block rounded-full border border-gold/40 bg-goldSoft px-3 py-1 text-xs font-medium tracking-wide text-gold'>
                     Advertencia
                 </span>
                 <h2 className='mt-4 text-2xl font-semibold tracking-tight text-ink'>
-                    Algo salió mal
+                    No pudimos cargar la cuenta
                 </h2>
                 <p className='mt-2 text-sm text-ink/65'>
-                    No pudimos cargar la información en este momento. Inténtalo de nuevo o vuelve al inicio.
+                    Ocurrió un problema al obtener la información. Inténtalo de nuevo en un momento.
                 </p>
                 {error.digest && (
                     <p className='mt-3 font-mono text-[11px] text-ink/40'>
@@ -46,6 +48,6 @@ export default function Error({
                     </Link>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
