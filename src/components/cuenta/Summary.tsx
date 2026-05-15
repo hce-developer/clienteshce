@@ -41,8 +41,8 @@ export default function Summary({ data }: { data: SummaryData }) {
                         </div>
 
                         <div className="min-w-0 ml-4">
-                            <p className="truncate text-3xl font-semibold tracking-tight text-ink sm:text-3xl">
-                                Cuenta · {data.NoCta ?? '—'}
+                            <p className="mt-0.5 break-all text-2xl font-semibold leading-tight tracking-tight text-ink tabular-nums sm:text-3xl">
+                                {data.NoCta ?? '—'}
                             </p>
                             <p className="mt-1 truncate text-lg uppercase tracking-[0.18em] text-ink/70 sm:text-base">
                                 {name}
