@@ -141,10 +141,10 @@ export default function PromoBanner() {
                                     id="promo-title"
                                     className="mt-2 text-balance text-2xl font-semibold leading-tight tracking-tight text-ink sm:text-3xl"
                                 >
-                                    ¡Nuevo sistema de puntos!
+                                    ¡Próximamente!
                                 </h2>
                                 <p className="mt-2 text-sm text-ink/70 sm:text-base">
-                                    Genera puntos con cada pago y canjéalos por productos. Ahora tus compras valen más.
+                                    Generarás puntos con cada pago y los podrás cambiar por productos. ¡Tus compras tendrán más valor!
                                 </p>
                             </div>
 

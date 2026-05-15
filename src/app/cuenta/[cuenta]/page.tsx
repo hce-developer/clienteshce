@@ -4,7 +4,7 @@ import RedeemableProducts from '@/components/cuenta/RedeemableProducts'
 import { getCuenta, getProductosCanjeables } from '../../api/cuenta'
 import { isValidNoCuenta } from '@/utils/isValidNoCuenta'
 import { redirect } from 'next/navigation'
-import { Result } from 'antd';
+import { Flex, Result } from 'antd';
 import { tablaAmortColumns, tablaPagosColumns } from '@/constants/columns'
 import Search from '@/components/cuenta/Search'
 
@@ -23,8 +23,13 @@ export default async function Cuenta({ params }: { params: Promise<{ cuenta: str
             <Result
                 status='warning'
                 title='Número de cuenta no encontrado'
-                subTitle='Parece que el número de cuenta ingresado no existe, intente con otro, por favor.'
-                extra={<Search styleVariant='compact' />}
+                subTitle='Parece que el número de cuenta ingresado no existe, intenta con otro, por favor.'
+                extra={
+                    <Flex justify="center" align="center">
+                        <Search styleVariant='compact' />
+                    </Flex>
+                }
+                    
             />
         )
     }
@@ -46,7 +51,7 @@ export default async function Cuenta({ params }: { params: Promise<{ cuenta: str
                     data={pagos}
                     rowKey='IdPagsCli'
                 />
-                <RedeemableProducts data={productos} />
+                {/* <RedeemableProducts data={productos} /> */}
             </div>
         </>
     )

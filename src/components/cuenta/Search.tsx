@@ -46,7 +46,7 @@ export default function Search({ styleVariant = "primary"} : { styleVariant?: "p
 
     const placeholderVariants = {
         primary: "Ingresa tu número de cuenta",
-        compact: "Ingresa tu cuenta"
+        compact: "Cuenta"
     }
 
     return (

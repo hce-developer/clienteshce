@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <HeroSearch />
       <PromoBanner />
-      <FacebookFeed />
+      {/** <FacebookFeed /> */}
       <Encargos />
       <ProductRange />
     </>
